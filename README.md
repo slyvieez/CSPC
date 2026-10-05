@@ -29,3 +29,9 @@ The $1\times2$ plot demonstrates that the observed data points closely match the
 
 **Automation:**
 I implemented a Snakemake pipeline that automatically regenerates `figure.png` by running `plot.py` only if the input `decay_observed.csv` dataset is modified.
+
+## PW2 — Lab A
+**Motion from tracking data:**
+Mean acceleration measured: −8.58 m/s² (std 28.7 m/s²), consistent with free fall at −9.81 m/s²; the offset comes from noisy one-sided differences at the endpoints.
+The acceleration is so noisy because each derivative divides small differences between neighbouring noisy measurements by Δt = 0.1 s, so the noise is magnified twice, while position was measured directly.
+Integrating the noisy acceleration twice recovered the position to within 0.785 m of the original, showing that integration averages out noise.
